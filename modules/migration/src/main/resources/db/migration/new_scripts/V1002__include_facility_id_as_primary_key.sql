@@ -1,0 +1,10 @@
+
+ALTER TABLE REQUISITION_LINE_ITEM_LOSSES_ADJUSTMENTS DROP CONSTRAINT IF EXISTS requisition_line_item_losses_adjustments_facilityid_fkey;
+UPDATE REQUISITION_LINE_ITEM_LOSSES_ADJUSTMENTS SET facilityId = 0 WHERE FACILITYID IS NULL;
+
+ALTER TABLE REQUISITION_LINE_ITEM_LOSSES_ADJUSTMENTS
+    DROP CONSTRAINT IF EXISTS requisition_line_item_losses_adjustments_pkey;
+
+ALTER TABLE REQUISITION_LINE_ITEM_LOSSES_ADJUSTMENTS
+    ADD CONSTRAINT requisition_line_item_losses_adjustments_pkey
+        PRIMARY KEY (requisitionlineitemid, type, facilityId);

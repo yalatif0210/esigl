@@ -1,0 +1,2 @@
+ALTER TABLE programs
+    ADD amcMonths INT NOT NULL DEFAULT 3;

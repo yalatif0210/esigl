@@ -1,0 +1,2 @@
+openlmis-web.jar filter=lfs diff=lfs merge=lfs -text
+openlmis-web.war filter=lfs diff=lfs merge=lfs -text
