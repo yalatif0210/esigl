@@ -49,6 +49,7 @@ public class CustomReportController extends BaseController {
   public static final String REPORT = "report";
   @Autowired
   CustomReportRepository reportRepository;
+  
 
   @RequestMapping(value = "list")
   public ResponseEntity<OpenLmisResponse> getListOfReports(){
