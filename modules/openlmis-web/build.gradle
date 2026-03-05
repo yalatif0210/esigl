@@ -179,7 +179,12 @@ dependencies {
     compile 'io.swagger:swagger-annotations:1.5.18'
     compile 'io.springfox:springfox-core:2.6.0'
   compile 'org.springframework:spring-context:4.1.5.RELEASE'
-
+  implementation ('net.sf.jasperreports:jasperreports:6.3.1') {
+    exclude group: 'com.lowagie', module: 'itext'
+    exclude group: 'org.apache.lucene'
+    exclude group: 'org.olap4j'
+  }
+  implementation 'com.lowagie:itext:2.1.7'
   compile 'org.apache.commons:commons-lang3:3.7'
   compile 'org.springframework:spring-beans:4.1.5.RELEASE'
   compile 'jdom:jdom:1.0'
