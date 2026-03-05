@@ -145,6 +145,11 @@ subprojects {
     implementation 'org.apache.poi:poi:5.2.3'
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
     // ----------------------------------------------------------------
+
+    
+    // --- Dépendance manquante et nécessaire (fix itext) ---
+    implementation 'com.lowagie:itext:2.1.7.js9'
+
   }
 
   test {
