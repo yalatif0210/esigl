@@ -34,6 +34,24 @@ buildscript {
     classpath "org.gretty:org.gretty.gradle.plugin:3.0.6"
   }
 }
+
+allprojects {
+    repositories {
+        mavenCentral()
+
+        // Repository officiel JasperReports (artefacts Jaspersoft)
+        maven { url "https://jaspersoft.jfrog.io/artifactory/third-party-ce-artifacts/" }
+
+        // Nécessaire pour iText 2.1.7.js9/js2/js8
+        maven { url "https://repository.jboss.org/nexus/content/groups/public/" }
+
+        // Déjà existants (on garde)
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://repo.spring.io/release" }
+        maven { url "http://jasperreports.sourceforge.net/maven2/" }
+    }
+}
+
 sonarqube {
   properties {
     property "sonar.host.url", "$sonarServer"
@@ -82,7 +100,7 @@ subprojects {
         }
     }
   }
-  
+
   dependencies {
     compile 'cglib:cglib:3.1',
         'org.aspectj:aspectjrt:1.8.5',
