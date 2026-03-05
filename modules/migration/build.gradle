@@ -32,6 +32,18 @@ dependencies {
     }
 }
 
+
+task initExtensions {
+  doLast {
+    ant.flywayInit(
+      driver: 'org.postgresql.Driver',
+      url: "jdbc:postgresql://$databaseHostName:$databasePort/$dbName",
+      user: dbUser, password: dbPassword,
+      table: 'migration_schema_version'  // ou 'migration_schema_version' si c’est ce que lit le code
+    )
+  }
+}
+
 task setupExtensions() {
     doLast {
         ext.flyway_classpath = files(configurations.flyway)
