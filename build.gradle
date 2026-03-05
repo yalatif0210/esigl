@@ -169,7 +169,7 @@ subprojects {
 
     // --- AJOUT INDISPENSABLE POUR RESOUDRE L’ERREUR JASPERREPORTS ---
     // === JasperReports compatible OpenLMIS/ESIGL ===
-    implementation 'net.sf.jasperreports:jasperreports:4.7.1'
+   implementation 'net.sf.jasperreports:jasperreports:5.6.0'
 
     // === Apache POI legacy (compatible BOLDWEIGHT & CellStyle constants) ===
     implementation 'org.apache.poi:poi:3.10-FINAL'
