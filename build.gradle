@@ -136,6 +136,15 @@ subprojects {
         'org.springframework:spring-test:4.1.5.RELEASE'
 
     annotationProcessor('org.projectlombok:lombok:1.18.10')
+
+    // --- AJOUT INDISPENSABLE POUR RESOUDRE L’ERREUR JASPERREPORTS ---
+    implementation 'net.sf.jasperreports:jasperreports:6.20.0'
+    implementation 'net.sf.jasperreports:jasperreports-fonts:6.20.0'
+    implementation 'net.sf.jasperreports:jasperreports-functions:6.20.0'
+    implementation 'org.codehaus.castor:castor-xml:1.4.1'
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    // ----------------------------------------------------------------
   }
 
   test {
